@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Bingo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bingo-container">
+    <div class="bingo-header">
+      <span class="letter">B</span>
+      <span class="letter">I</span>
+      <span class="letter">N</span>
+      <span class="letter">G</span>
+      <span class="letter">O</span>
+    </div>
+
+
+    <!-- Budget Display -->
+    <div id="budget-display">Budget: ₹1000</div>
+
+
+    <!-- Bingo Board -->
+    <div id="bingo-board" class="bingo-board"></div>
+
+
+    <!-- Draw Button -->
+    <button id="draw-ball">Draw Bingo Ball</button>
+
+
+    <!-- Drawn Number -->
+    <div id="drawn-number" class="drawn-number"></div>
+
+
+    <!-- Question Modal -->
+    <div id="question-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <p id="question-text">Question goes here...</p>
+        <div id="options-container"></div>
+        <button class="close-modal-btn">Close</button>
+      </div>
+    </div>
+
+
+    <!-- Result Display -->
+    <div id="result-display"></div>
+   
+    <!-- AI Feedback Panel -->
+    <div id="ai-feedback-panel" class="hidden">
+      <h2>AI Financial Insights</h2>
+      <div class="loading-spinner hidden">
+        <div class="spinner"></div>
+        <p>Analyzing your financial decisions...</p>
+      </div>
+      <div id="ai-feedback-content">
+        <div id="ai-insights"></div>
+        <div id="ai-lesson">
+          <h3 id="lesson-title"></h3>
+          <p id="lesson-content"></p>
+        </div>
+        <div id="ai-summary"></div>
+      </div>
+      <button id="restart-game" class="primary-button">Play Again</button>
+    </div>
+
+
+    <!-- API Key Input Section -->
+    <div id="api-key-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Enter Your OpenAI API Key</h2>
+        <p>To get AI feedback, please enter your OpenAI API key:</p>
+        <input type="password" id="apiKey" placeholder="sk-...">
+        <button id="submit-api-key">Submit</button>
+        <p class="note">Note: Your API key is used only for this session and not stored.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
