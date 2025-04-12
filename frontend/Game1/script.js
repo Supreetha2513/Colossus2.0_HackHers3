@@ -236,7 +236,7 @@ const promptBank = [
     console.log("DOM fully loaded, initializing bingo game");
    
     // Game state
-    let budget = 1000;
+    let budget = 3000;
     let currentNumber = null;
     let drawnNumbers = new Set();
     let selectedTiles = new Set();
